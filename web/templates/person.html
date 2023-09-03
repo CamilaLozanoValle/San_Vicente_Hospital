@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Person Form</h1>
+    <p>Enter the patient's id, Full name, gender, birthdate, vital signs, prescribed medications and evolution's notes:   </p>
+        <br>
+            <form action="/person_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">ID</span>
+                    <input type="text" class="form-control" name="id_person" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_name">Full name</span>
+                    <input type="text" class="form-control" name="first_name" aria-label="Sizing example input" aria-describedby="inputGroup_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Gender</span>
+                    <input type="text" class="form-control" name="gender" aria-label="Sizing example input" aria-describedby="inputGroup_gender">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Birthdate</span>
+                    <input type="text" class="form-control" name="birthdate" aria-label="Sizing example input" aria-describedby="inputGroup_birthdate" placeholder="01/01/2000">
+                </div>
+
+               <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_vitalSigns">Vital Signs (temperature, O2 saturation, respiratory frequency, blood pressure)</span>
+                    <input type="text" class="form-control" name="vital_signs" aria-label="Sizing example input" aria-describedby="inputGroup_vitalSigns" placeholder="30,98,75,21">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_medicines">Medicine (Medicines's name, quantity)</span>
+                    <input type="text" class="form-control" name="medicines" aria-label="Sizing example input" aria-describedby="inputGroup_medicines" placeholder="acetaminofen,75">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_notes">Notes</span>
+                    <input type="text" class="form-control" name="notes" aria-label="Sizing example input" aria-describedby="inputGroup_notes">
+                </div>
+
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}
